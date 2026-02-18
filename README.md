@@ -5,9 +5,9 @@
 ![Status](https://img.shields.io/badge/Status-Research%20Prototype-orange)
 
 ## Project Overview
-This repository contains the source code for my Master's Thesis in Public Policy (University of Chicago). The project develops a computer vision pipeline to detect, map, and analyze the spatial distribution of informal markets ("camelôs") in São Paulo, Brazil.
+This repository contains the source code for a research project completed during my Master of Public Policy at the University of Chicago. The project develops a computer vision pipeline to detect and map the spatial distribution of informal markets (*"camelôs"*) in São Paulo, Brazil.
 
-By integrating **Google Street View (GSV)** imagery, **Roboflow** object detection, and **VIIRS** satellite nighttime lights, this tool quantifies the "Shadow Economy" at a granular street level, offering new insights for urban planning and economic policy.
+Beyond visual mapping, the project integrates data from the **PNAD-C household survey** to estimate the informal income of these street vendors. By combining object detection with economic microdata, this tool quantifies the "Shadow Economy" at a granular street level, offering new insights for urban planning and economic policy.
 
 ## Methodology
 The pipeline operates in three stages:
@@ -16,9 +16,9 @@ The pipeline operates in three stages:
     * Scans coordinates based on official shapefiles of São Paulo's urban grid.
 2.  **Object Detection:**
     * Utilizes a custom-trained YOLOv8 model (via Roboflow) to identify street vendors, stalls, and informal commerce markers.
-3.  **Analysis & Visualization (`visualize_map.py`):**
-    * Correlates vendor density with socio-economic indicators.
-    * Generates interactive heatmaps (`sp_hexbin_map.html`) to visualize commercial hotspots.
+3.  **Economic Analysis & Visualization (`visualize_map.py`):**
+    * Constructs a synthetic dataset using **PNAD-C survey data** to map the estimated informal salaries of identified vendors.
+    * Generates interactive heatmaps (`sp_hexbin_map.html`) to visualize commercial hotspots against socio-economic wealth indices.
 
 ## Key Files
 * `sp_real_shape_scan.py`: Main script for the scanning algorithm.
