@@ -6,12 +6,26 @@ import shutil  # <--- FIXED TYPO (was shutilit)
 import numpy as np
 from roboflow import Roboflow
 from shapely.geometry import Point, shape
+import os
+from dotenv import load_dotenv
 
 # --- 1. CONFIGURATION ---
-GOOGLE_API_KEY = "AIzaSyBMMzyleMtj3XgPgBlEhNvQMrZbH8XSQgw"
-ROBOFLOW_API_KEY = "t2jq94gHItiL5ZSLhwMG"
-PROJECT_NAME = "camelo-detection-v1"
+import os
+from dotenv import load_dotenv
 
+# 1. Load the secret .env file
+load_dotenv()
+
+# 2. Get the keys safely from the vault
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+ROBOFLOW_API_KEY = os.getenv("ROBOFLOW_API_KEY")
+PROJECT_NAME = os.getenv("PROJECT_NAME")
+
+# Check if they loaded correctly (Optional safety check)
+if not GOOGLE_API_KEY or not ROBOFLOW_API_KEY:
+    raise ValueError("CRITICAL ERROR: API Keys not found! Make sure .env file exists.")
+
+print("Secure keys loaded successfully.")
 # VERSION: Keep at 3
 VERSION = 3
 

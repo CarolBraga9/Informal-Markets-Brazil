@@ -1,2 +1,3 @@
 *.tif
 Image_Banks/
+.env
