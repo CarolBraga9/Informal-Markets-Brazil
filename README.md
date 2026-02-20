@@ -26,6 +26,26 @@ The pipeline operates in three stages:
 * `build_thesis_dataset.py`: Aggregates raw detection data into a structured dataset for regression analysis.
 * `Shadow_Economy_Report.xlsx`: Preliminary findings and data exports.
 
+## Project Structure
+
+```text
+Informal-Markets-Brazil/
+├── .vscode/                   # VS Code workspace settings
+├── Archive_Data/              # Sample detections and backup data
+├── Archive_Scripts/           # Deprecated or old scraping scripts
+├── Final_Results/             # Output maps, datasets, and figures
+├── sp_real_shape_images/      # Raw Google Street View images (Excluded via .gitignore)
+├── .env                       # API Keys (Local only, not tracked by Git)
+├── .gitignore                 # Specifies which files Git should ignore
+├── README.md                  # Project documentation
+├── Shadow_Economy_Report.xlsx # Preliminary findings and data exports
+├── build_thesis_dataset.py    # Aggregates raw data into structured dataset
+├── create_presentation.py     # Script to generate final presentation visuals
+├── organize_project.py        # Utility script for file management
+├── sp_hexbin_map.html         # Interactive heatmap output
+├── sp_real_shape_scan.py      # Main automated scanning script
+└── visualize_map.py           # Generates spatial statistics and maps
+
 ## Usage
 To run the scanning tool locally:
 
