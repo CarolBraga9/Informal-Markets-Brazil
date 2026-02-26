@@ -26,8 +26,8 @@ if not GOOGLE_API_KEY or not ROBOFLOW_API_KEY:
     raise ValueError("CRITICAL ERROR: API Keys not found! Make sure .env file exists.")
 
 print("Secure keys loaded successfully.")
-# VERSION: Keep at 3
-VERSION = 3
+
+VERSION = 6
 
 # WALLET GUARD
 MAX_POINTS_LIMIT = 10000
