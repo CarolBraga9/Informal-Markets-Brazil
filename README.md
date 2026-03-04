@@ -25,6 +25,7 @@ The pipeline operates in three stages:
 * `visualize_map.py`: Generates hexbin maps and spatial statistics.
 * `build_thesis_dataset.py`: Aggregates raw detection data into a structured dataset for regression analysis.
 * `Shadow_Economy_Report.xlsx`: Preliminary findings and data exports.
+* `Slide_deck.pdf`: Slide deck summarizing the project methodology and findings so far.
 
 ## 🗂️ Project Structure
 
@@ -38,6 +39,7 @@ Informal-Markets-Brazil/
 ├── .env                       # API Keys (Local only, not tracked by Git)
 ├── .gitignore                 # Specifies which files Git should ignore
 ├── README.md                  # Project documentation
+├── Slide_deck.pdf             # Project slide deck
 ├── Shadow_Economy_Report.xlsx # Preliminary findings and data exports
 ├── build_thesis_dataset.py    # Aggregates raw data into structured dataset
 ├── create_presentation.py     # Script to generate final presentation visuals
@@ -97,6 +99,7 @@ flowchart LR
     V --- V1[visualize_map.py]
     V --- V2[Interactive Heatmaps]
     V --- V3[Socio-economic Data]
+    V --- V4[Slide_deck.pdf]
 ```
 
 ## 👩‍💻 Author
