@@ -15,7 +15,7 @@ The pipeline operates in three stages:
     * Automates the retrieval of geolocated street-level imagery using the Google Maps Static API.
     * Scans coordinates based on official shapefiles of São Paulo's urban grid.
 2.  **Object Detection:**
-    * Utilizes a custom-trained YOLOv8 model (via Roboflow) to identify street vendors, stalls, and informal commerce markers.
+    * Utilizes a custom-trained YOLOv11 model (via Roboflow) to identify street vendors, stalls, and informal commerce markers.
 3.  **Economic Analysis & Visualization (`visualize_map.py`):**
     * Constructs a synthetic dataset using **PNAD-C survey data** to map the estimated informal salaries of identified vendors.
     * Generates interactive heatmaps (`sp_hexbin_map.html`) to visualize commercial hotspots against socio-economic wealth indices.
@@ -86,7 +86,7 @@ flowchart LR
     DC --- DC3[São Paulo Shapefiles]
 
     %% Object Detection Leaves
-    OD --- OD1[YOLOv8 Model]
+    OD --- OD1[YOLOv11 Model]
     OD --- OD2[Roboflow Platform]
     OD --- OD3[Detect Camelôs]
 
